@@ -70,12 +70,11 @@ function displayWeather(data) {
 }
 
 function displayHourlyForecast(hourlyData) {
-
     const hourlyForecastDiv = document.getElementById('hourly-forecast');
+    
     const next24Hours = hourlyData.slice(0, 8);
 
     next24Hours.forEach(item => {
-
             const dateTime = new Date(item.dt * 1000);
             const hour = dateTime.getHours();
             const temperature = Math.round(item.main.temp - 273.15);
@@ -89,7 +88,12 @@ function displayHourlyForecast(hourlyData) {
                 <span>${temperature}°C</span>
             </div>
         `;
+
         hourlyForecastDiv.innerHTML += hourlyItemHtml;
     });
 }
 
+function showImage() {
+    const weatherIcon = document.getElementById('weather-icon');
+    weatherIcon.style.display = 'block';
+}
