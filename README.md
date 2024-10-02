@@ -10,3 +10,6 @@ A simple HTML, CSS and JavaScript weather application using the openweather API 
 **5.** Copy that key to your clipboard<br>
 **6.** Insert that key into the required variable in the **script.js** file for this project<br>
 **7.** Enjoy! :smile:
+
+## LINK TO LIVE SITE: 
+**https://ejquezada.github.io/Weather_App/**
