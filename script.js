@@ -7,7 +7,7 @@ function getWeather() {
         return;
     }
 
-    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+    const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
 
     fetch(currentWeatherUrl)
@@ -21,7 +21,7 @@ function getWeather() {
         });
 
     fetch(forecastUrl)
-        .then(response => response.json)
+        .then(response => response.json())
         .then(data => {
             displayHourlyForecast(data.list);
         })
@@ -77,7 +77,7 @@ function displayHourlyForecast(hourlyData) {
     next24Hours.forEach(item => {
             const dateTime = new Date(item.dt * 1000);
             const hour = dateTime.getHours();
-            const temperature = Math.round(item.main.temp - 273.15);
+            const temperature = Math.round(item.main.temp - 273.15); //Convert to Celsius
             const iconCode = item.weather[0].icon;
             const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
 
@@ -97,3 +97,4 @@ function showImage() {
     const weatherIcon = document.getElementById('weather-icon');
     weatherIcon.style.display = 'block';
 }
+
