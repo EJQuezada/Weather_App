@@ -1,5 +1,8 @@
+
+![Screenshot 2024-10-02 114718](https://github.com/user-attachments/assets/8f4fbf03-9688-4f84-82cb-c0eaec0ee37f)
+
 # Weather Application
-A simple HTML, CSS and JavaScript weather application using the openweather API where user can search for the current and forecasted weather at a specific location.
+A simple *HTML*, *CSS* and *JavaScript* weather application using the openweather API where user can search for the current and forecasted weather at a specific location.
 
 ## STEPS TO RUN THE CODE:
 
